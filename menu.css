@@ -1,5 +1,5 @@
 .closed {
-    left: -200px;
+    left: -20vw;
 }
 
 .Toggle {
@@ -11,6 +11,7 @@
     z-index: 3;
     left:5px;
     top: 5px;
+    transition: 1s;
 }
  
 .Toggle span {

@@ -11,7 +11,7 @@
     position: fixed;
     display: flex;
     top: 47px;
-    height: 100vh;
+    height: 90vh;
     transition: .5s;
 }
 .sidebar button {
@@ -19,29 +19,44 @@
     width: 100%;
     background-color: #000;
     color: white;
-    opacity: .7;
+    opacity: .9;
     animation: left-to-right 1s;
     animation-fill-mode: both;
     transition: .35s ease-in-out;
 }
 .letter, .chapter, .section {
     position: absolute;
-    width: 200px;
-    height: 100vh;
+    width: 20vw;
+    height: 100%;
     transition: .5s;
     overflow: scroll;
 }
 .letter {
     left: 0px;
-    background-color: blue;
 }
 .chapter {
-    left: 200px;
-    background-color: green;
+    left: 20vw;
 }
 .section {
-    left: 400px;
-    background-color: red;
+    left: 40vw;
+}
+
+#output {
+    width: 100%;
+    height: 100%;
+    background-color: #6eb7ff;
+    padding: 1em;
+}
+#wrapper {
+    margin: 1em;
+}
+.ch {
+    background-color: #FBFDB7;
+    border-radius: 5px;
+}
+.jp {
+    background-color:#b6fafc;
+    border-radius: 5px;
 }
 
 .wave {
@@ -59,5 +74,23 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .letter, .chapter, .section {
+        width: 33.3vw;
+    }
+    .closed {
+        left: -33.3vw !important;
+    } 
+    .letter {
+        left: 0px;
+    }
+    .chapter {
+        left: 33.3vw;
+    }
+    .section {
+        left: 66.6vw;
     }
 }

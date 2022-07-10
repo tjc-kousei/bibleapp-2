@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    top: 47px;
+    height: 100vh;
+    transition: .5s;
+}
+.sidebar button {
+    height: 50px;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    opacity: .7;
+    animation: left-to-right 1s;
+    animation-fill-mode: both;
+    transition: .35s ease-in-out;
+}
+.letter, .chapter, .section {
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    transition: .5s;
+    overflow: scroll;
+}
+.letter {
+    left: 0px;
+    background-color: blue;
+}
+.chapter {
+    left: 200px;
+    background-color: green;
+}
+.section {
+    left: 400px;
+    background-color: red;
+}
+
+.wave {
+    position: fixed;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
